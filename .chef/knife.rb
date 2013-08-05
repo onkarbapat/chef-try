@@ -1,1 +1,1 @@
-cookbook_path [ '/home/vagrant/chef-repo/cookbooks' ]
+cookbook_path [ '/home/vagrant/chef-try/cookbooks' ]
