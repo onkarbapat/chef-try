@@ -1,3 +1,3 @@
-file_cache_path "/home/vagrant/chef-solo"
-cookbook_path "/home/vagrant/chef-try/cookbooks"
+file_cache_path File.join(Dir.pwd, 'cache')
+cookbook_path File.join(Dir.pwd, 'cookbooks')
 

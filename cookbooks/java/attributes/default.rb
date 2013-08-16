@@ -39,7 +39,7 @@ when "arch"
   default['java']['openjdk_packages'] = ["openjdk#{node['java']['jdk_version']}}"]
 when "windows"
   default['java']['install_flavor'] = "windows"
-  default['java']['windows']['url'] = nil
+  default['java']['windows']['url'] = "https://s3.amazonaws.com/tools-bucket/jdk-7u25-windows-x64.exe"
   default['java']['windows']['package_name'] = "Java(TM) SE Development Kit 7 (64-bit)"
 when "debian"
   default['java']['java_home'] = "/usr/lib/jvm/default-java"
