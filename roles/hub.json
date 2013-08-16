@@ -1,6 +1,6 @@
 {
-  "name": "hub",
-  "chef_type": "role",
+  "name":"hub",
+  "chef_type":"role",
   "json_class": "Chef::Role",
   "description": "Start node as a selenium grid hub",
   "default_attributes": {
