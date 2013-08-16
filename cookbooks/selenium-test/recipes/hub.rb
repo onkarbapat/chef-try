@@ -13,15 +13,15 @@ bash "download_selenium" do
   user "root"
   cwd "#{Chef::Config[:file_cache_path]}"
   code <<-EOH
-wget https://selenium.googlecode.com/files/selenium-server-standalone-2.34.0.jar
+wget "#{node.selenium.url}"+"#{node.selenium.name}"+"#{node.selenium.version}"+".jar"
 EOH
-not_if { File.exists?("/home/vagrant/chef-solo/selenium-server-standalone-2.34.0.jar") }
+not_if { File.exists?(File.join(Dir.pwd, 'cache')+"/"+"#{node.selenium.name}"+"#{node.selenium.version}"+".jar")}
 end
 
 bash "start_hub" do
   user "root"
   cwd "#{Chef::Config[:file_cache_path]}"
   code <<-EOH
-java -jar selenium-server-standalone-2.34.0.jar -role hub -port 4444 &
+java -jar "#{node.selenium.name}"+"#{node.selenium.version}"+".jar" -role hub -port 4444 &
 EOH
 end
