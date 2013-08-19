@@ -1,0 +1,24 @@
+{
+  "name":"hub",
+  "chef_type":"role",
+  "json_class": "Chef::Role",
+  "description": "Attach node to selenium hub",
+  "default_attributes": {
+    "selenium": {
+      "name": "selenium-server-standalone-",
+      "version": "2.34.0",
+      "url": "https://selenium.googlecode.com/files/"
+    },
+    "user":{
+      "name": "root"
+    },
+    "browser":{
+      "name":"chrome",
+      "version":"2.10",
+      "selenium_config_path":"chrome.json"
+    }
+  },
+  "run_list": [
+    "recipe[selenium-test::node]"
+  ]
+}
