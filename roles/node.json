@@ -19,6 +19,7 @@
     }
   },
   "run_list": [
+    "recipe[powershell]",
     "recipe[selenium-test::node]"
   ]
 }

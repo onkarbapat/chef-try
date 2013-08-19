@@ -7,7 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "java"
 include_recipe "chocolatey"
 
-chocolatey ENV["cpack"]
+windows_batch "ffox" do
+  code <<-EOH
+  cinst Firefox
+  EOH
+end
