@@ -13,9 +13,14 @@
       "name": "root"
     },
     "browser":{
-      "name":"chrome",
-      "version":"2.10",
-      "selenium_config_path":"chrome.json"
+      "package":"GoogleChrome",
+      "version":"-Version 28.0.1500.72"
+    },
+    "settings":{
+      "config":"../selenium_node_config/chrome.json"
+    },
+    "server":{
+      "ip":"http://54.215.65.82:4444/grid/register"
     }
   },
   "run_list": [

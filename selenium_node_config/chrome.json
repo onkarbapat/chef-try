@@ -1,7 +1,7 @@
 {
   "capabilities": [{
     "browserName": "chrome",
-    "version": "3.6",
+    "version": "28.0",
     "platform": "WINDOWS",
     "maxInstances": 1
   }],
@@ -9,7 +9,7 @@
     "nodeTimeout": 120,
     "port": 5555,
     "hubPort": 4444,
-    "hubHost": "localhost",
+    "hubHost": "54.215.65.82",
     "nodePolling": 2000,
     "registerCycle": 10000,
     "register": true,
