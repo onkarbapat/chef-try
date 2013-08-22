@@ -7,7 +7,7 @@
   }],
   "configuration": {
     "nodeTimeout": 120,
-    "port": 5555,
+    "port": 4444,
     "hubPort": 4444,
     "hubHost": "54.215.65.82",
     "nodePolling": 2000,

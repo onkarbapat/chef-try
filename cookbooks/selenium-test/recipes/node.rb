@@ -13,18 +13,18 @@ powershell "download selenium" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
   $webclient = New-Object System.Net.WebClient;
-$url = #{node.selenium.url}#{node.selenium.name}#{node.selenium.version}.jar;
-$file = #{node.selenium.name}#{node.selenium.version}.jar;
+$url = "#{node.selenium.url}#{node.selenium.name}#{node.selenium.version}.jar";
+$file = "#{node.selenium.name}#{node.selenium.version}.jar";
 $webclient.DownloadFile($url,$file);
 EOH
   not_if { File.exists?(File.join(Dir.pwd, 'cache')+"/#{node.selenium.name}#{node.selenium.version}.jar")}
 end
 
-powershell "install browser" do 
-	code <<-EOH
-	cinst #{node.browser.package} #{node.browser.version}
-	EOH
-end
+# powershell "install browser" do 
+# 	code <<-EOH
+# 	cinst #{node.browser.package} #{node.browser.version}
+# 	EOH
+# end
 
 powershell "start_node" do
   cwd "#{Chef::Config[:file_cache_path]}"
